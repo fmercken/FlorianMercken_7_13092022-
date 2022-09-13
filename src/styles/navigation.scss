@@ -1,0 +1,22 @@
+.navigation {
+
+    border: solid 1px;
+    border-radius: 50px;
+
+    ul {
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+        a {
+            text-decoration: none;
+
+            li {
+
+                color: $color-3;
+
+            }
+        }
+    }
+}
