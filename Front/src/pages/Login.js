@@ -56,10 +56,12 @@ const Login = () => {
         <div>
             <form className="connection">
                 <div className="size-1">
-                    <input className="size-2" onChange={(evenement) => setEmail(evenement.target.value)} type="text" name="email" placeholder="E-mail adress"></input>
+                <div><label for ="Email">email utilisateur</label></div>
+                    <input id="Email" className="size-2" onChange={(evenement) => setEmail(evenement.target.value)} type="text" name="email" placeholder="E-mail adress"></input>
                 </div>
                 <div className="size-1">
-                    <input className="size-2" onChange={(evenement) => setPassword(evenement.target.value)} type="password" name="password" placeholder="Password"></input> 
+                <div><label for ="Password">mots de passe</label></div>
+                    <input  id="Password"className="size-2" onChange={(evenement) => setPassword(evenement.target.value)} type="password" name="password" placeholder="Password"></input> 
                 </div>
                 <div className="padding-1">
                     {loading ? "chargement ..." : <button type="button" className="padding-3" onClick={onLogin}> Login </button>}

@@ -48,12 +48,13 @@ import { useNavigate, useSearchParams } from "react-router-dom";
         return (
             <div className="post">
                 <form className="form-1">
-                    <div>
-                        <textarea className="text-1" value={description} onChange={(toto) => setDescription(toto.target.value)}></textarea>
+                    <div><div><label for ="description">Zone du texte pour la création de post</label></div> 
+                    <textarea id="description" className="text-1" value={description} onChange={(toto) => setDescription(toto.target.value)}></textarea>
                     </div>
-                    <div className="button-2">
-                        {fileUrl && <img src={fileUrl} width="200" />}
-                        <input type="file" onChange={(e) => setFile(e.target.files[0])}/> <label>Ajouter une photo</label>
+                    <div className="button-2"> 
+                        {fileUrl && <img alt="image a modifier" src={fileUrl} width="200" />}
+                        <div><label for ="images">choisir une photo</label></div>
+                 <input id="images" type="file" onChange={(e) => setFile(e.target.files[0])}/>
                         <button type="button"  onClick={onUpdate}> Modifier</button>
                     </div>
                     {loading && <span>Chargement en cours ....</span>}
